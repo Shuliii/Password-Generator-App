@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+
+:root {
+  --red: #f64a4a;
+  --orange: #fb7c58;
+  --yellow: #f8cd65;
+  --neon-green: #a4ffaf;
+  --almost-white: #e6e5ea;
+  --grey: #817d92;
+  --dark-grey: #24232c;
+  --very-dark-grey: #18171f;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: "JetBrains Mono";
+  gap: 31px;
+  background: var(--very-dark-grey);
+  font-weight: 700;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--grey);
+}
+
+main {
+  display: grid;
+  gap: 24px;
+  width: 540px;
+}
+
+.generated-password,
+.generator {
+  background: var(--dark-grey);
+}
+
+/* .generated-password {
+  font-size: 2rem;
+  color: var(--almost-white);
+  display: flex;
+  padding: 19px 28px 19px 32px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.generated-password input {
+  background: none;
+  border: none;
+}
+
+.white::placeholder {
+  color: var(--almost-white);
+}
+
+.generated-password div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.copied {
+  display: none;
+
+  font-size: 18px;
+  color: var(--neon-green);
+}
+
+.active {
+  display: flex;
+} */
+
+/* .copy {
+  cursor: pointer;
+  width: 21px;
+  height: 24px;
+  display: inline;
+} */
+
+.generated-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 32px;
+  height: 80px;
+  max-width: 540px;
+}
+
+.generated-password input {
+  border: none;
+  background: none;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.generated-password input::placeholder {
+  overflow: visible;
+}
+
+.white::placeholder {
+  color: var(--almost-white);
+}
+
+.generated-password div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.copied {
+  display: none;
+
+  font-size: 18px;
+  color: var(--neon-green);
+}
+
+.active {
+  display: flex;
+}
+
+.generator {
+  display: grid;
+  gap: 32px;
+  padding: 24px 32px 32px;
+}
+
+.slider-container {
+  display: grid;
+  gap: 16px;
+}
+
+.slider-container label {
+  font-size: 18px;
+  color: var(--almost-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-container label span {
+  color: var(--neon-green);
+  font-size: 2rem;
+}
+
+input[type="range"] {
+  accent-color: var(--neon-green);
+}
+
+.checkboxes-container {
+  display: grid;
+  gap: 20px;
+  font-size: 18px;
+  color: var(--almost-white);
+}
+
+.checkboxes-option {
+  display: flex;
+  gap: 24px;
+}
+
+input[type="checkbox"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  background: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  outline: 1px solid var(--neon-green);
+}
+
+input[type="checkbox"]:checked {
+  background: var(--neon-green);
+  background-image: url("./images/icon-check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.strength-container {
+  background: var(--very-dark-grey);
+  padding: 21px 31.5px 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.strength-container h2 {
+  color: var(--grey);
+  font-size: 18px;
+}
+
+.strength-container div {
+  display: flex;
+  gap: 15.5px;
+  align-items: center;
+}
+
+.strength-container div .password-strength {
+  color: var(--almost-white);
+}
+
+.box-container {
+  display: flex;
+  gap: 8px;
+}
+
+.box {
+  width: 10px;
+  height: 28px;
+  border: 2px solid var(--almost-white);
+}
+
+.red {
+  background: var(--red);
+  border: none;
+}
+
+.yellow {
+  background: var(--yellow);
+  border: none;
+}
+
+.orange {
+  background: var(--orange);
+  border: none;
+}
+
+.green {
+  background: var(--neon-green);
+  border: none;
+}
+
+.button {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  padding-block: 20px;
+  background: var(--neon-green);
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: var(--dark-grey);
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+}
+
+.button:hover svg path {
+  fill: var(--neon-green);
+}

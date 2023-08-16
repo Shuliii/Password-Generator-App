@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <h1>Password Generator</h1>
+    <main>
+      <section class="generated-password">
+        <input type="text" placeholder="P4$5W0rD!" class="generated" disabled />
+        <div>
+          <h2 class="copied">COPIED</h2>
+          <img src="./images/icon-copy.svg" class="copy" />
+        </div>
+      </section>
+      <section class="generator">
+        <div class="slider-container">
+          <label for="slider" class="sliderlabel"
+            >Character Length<span class="sliderValue">10</span></label
+          >
+          <input
+            type="range"
+            class="slider"
+            name="slider"
+            id="slider"
+            min="5"
+            max="15"
+            value="10"
+          />
+        </div>
+
+        <div class="checkboxes-container">
+          <div class="checkboxes-option">
+            <input type="checkbox" name="uppercase" id="uppercase" />
+            <label for="uppercase">Include Uppercase Letters</label>
+          </div>
+          <div class="checkboxes-option">
+            <input type="checkbox" name="lowercase" id="lowercase" />
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>
+          <div class="checkboxes-option">
+            <input type="checkbox" name="numbers" id="numbers" />
+            <label for="numbers">Include Numbers</label>
+          </div>
+          <div class="checkboxes-option">
+            <input type="checkbox" name="symbols" id="symbols" />
+            <label for="symbols">Include Symbols</label>
+          </div>
+        </div>
+
+        <div class="strength-container">
+          <h2>STRENGTH</h2>
+          <div>
+            <h2 class="password-strength"></h2>
+            <div class="box-container">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="button">
+          GENERATE<svg
+            width="12"
+            height="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#24232C"
+              d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+            />
+          </svg>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
