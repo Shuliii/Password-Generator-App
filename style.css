@@ -42,52 +42,25 @@ main {
   width: 540px;
 }
 
+@media (max-width: 540px) {
+  body {
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  main {
+    gap: 16px;
+    width: 343px;
+  }
+}
+
 .generated-password,
 .generator {
   background: var(--dark-grey);
 }
-
-/* .generated-password {
-  font-size: 2rem;
-  color: var(--almost-white);
-  display: flex;
-  padding: 19px 28px 19px 32px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.generated-password input {
-  background: none;
-  border: none;
-}
-
-.white::placeholder {
-  color: var(--almost-white);
-}
-
-.generated-password div {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.copied {
-  display: none;
-
-  font-size: 18px;
-  color: var(--neon-green);
-}
-
-.active {
-  display: flex;
-} */
-
-/* .copy {
-  cursor: pointer;
-  width: 21px;
-  height: 24px;
-  display: inline;
-} */
 
 .generated-password {
   display: flex;
@@ -103,6 +76,18 @@ main {
   background: none;
   overflow: hidden;
   font-size: 2rem;
+}
+
+@media (max-width: 540px) {
+  .generated-password {
+    padding: 17px 16px;
+    height: 64px;
+    max-width: 343px;
+  }
+
+  .generated-password input {
+    font-size: 1.5rem;
+  }
 }
 
 .generated-password input::placeholder {
@@ -136,6 +121,12 @@ main {
   padding: 24px 32px 32px;
 }
 
+@media (max-width: 540px) {
+  .generator {
+    padding: 16px;
+  }
+}
+
 .slider-container {
   display: grid;
   gap: 16px;
@@ -154,6 +145,20 @@ main {
   font-size: 2rem;
 }
 
+@media (max-width: 540px) {
+  .slider-container {
+    gap: 8px;
+  }
+
+  .slider-container label {
+    font-size: 16px;
+  }
+
+  .slider-container label span {
+    font-size: 1.5rem;
+  }
+}
+
 input[type="range"] {
   accent-color: var(--neon-green);
 }
@@ -168,6 +173,16 @@ input[type="range"] {
 .checkboxes-option {
   display: flex;
   gap: 24px;
+}
+
+@media (max-width: 540px) {
+  .checkboxes-container {
+    gap: 16px;
+    font-size: 16px;
+  }
+  .checkboxes-option {
+    gap: 20px;
+  }
 }
 
 input[type="checkbox"] {
@@ -190,10 +205,16 @@ input[type="checkbox"]:checked {
 
 .strength-container {
   background: var(--very-dark-grey);
-  padding: 21px 31.5px 20px 32px;
+  padding: 22px 31.5px 22px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 540px) {
+  .strength-container {
+    padding: 14px 16px;
+  }
 }
 
 .strength-container h2 {
@@ -209,6 +230,16 @@ input[type="checkbox"]:checked {
 
 .strength-container div .password-strength {
   color: var(--almost-white);
+}
+
+@media (max-width: 540px) {
+  .strength-container h2 {
+    font-size: 16px;
+  }
+  .strength-container div {
+    display: flex;
+    gap: 16px;
+  }
 }
 
 .box-container {
